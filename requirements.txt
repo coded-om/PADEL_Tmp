@@ -95,7 +95,6 @@ pyzmq==25.1.0
 requests==2.23.0
 ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.7
-shiboken2==5.15.2.1
 shiboken6==6.4.2
 six==1.16.0
 sortedcontainers==2.4.0
