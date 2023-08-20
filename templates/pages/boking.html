@@ -1,0 +1,58 @@
+{% extends "beas.html" %}
+{% load static %}
+{% block content %}
+{% include "parts/css_boking.html" %}
+  <body>
+    <section class="position-relative text-center h-100">
+      <div
+        class="holder-frame  position-relative top-50 start-50 translate-middle w-75 p-5 rounded bg-white overflow-auto"
+        >
+        <div class="p-1 text-center fw-bolder fs-5 text-center m-auto">
+          <h5 class="titel mb-3 fw-bold">التاريخ والوقت <i class="fa-regular fa-calendar-days"></i></h5>
+          <p class="text-black-50 fs-6 mb-4">أختر التاريخ والوقت المناسب لك للحجز</p>
+        </div>
+        <div class="container">
+          <div class="d-flex flex-wrap  m-auto ">
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+              <div class="box   gap-2 bg-white overflow-hidden position-relative mb-2"data-bck-word="user info">
+                <h6 class="mt-2">5:00 pm - 6:00 pm</h6>
+                <p class=" mb-2">5-9-2023</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+              <div class="box   gap-2 bg-white overflow-hidden position-relative mb-2"data-bck-word="user info">
+                <h6 class="mt-2">5:00 pm - 6:00 pm</h6>
+                <p class=" mb-2">5-9-2023</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+              <div class="box   gap-2 bg-white overflow-hidden position-relative mb-2"data-bck-word="user info">
+                <h6 class="mt-2">5:00 pm - 6:00 pm</h6>
+                <p class=" mb-2">5-9-2023</p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 ">
+              <div class="box   gap-2 bg-white overflow-hidden position-relative mb-2"data-bck-word="user info">
+                <h6 class="mt-2">5:00 pm - 6:00 pm</h6>
+                <p class=" mb-2">5-9-2023</p>
+              </div>
+            </div>
+          </div>
+            </div>
+            <div
+              class="next-back d-flex position-absolute start-50 translate-middle-x w-100  justify-content-between bottom-0  align-items-center"
+            >
+              <a class="btn btn-warning px-lg-4 py-lg-3" href=" {% url 'index' %}"
+                ><i class="fa-solid fa-arrow-left me-1 mt-1"></i> رجوع
+              </a>
+              <a class="btn btn-dark px-lg-4 py-lg-3 text-light"
+                href=" {% url 'user_info' %}">متابعه <i class="fa-solid fa-arrow-right ms-1 mt-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  {% endblock content %}
+{% include "parts/navbar.html" %}

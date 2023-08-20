@@ -1,0 +1,135 @@
+body {
+  font-family: "Cairo", sans-serif;
+  height: 100vh;
+}
+
+/* start nav bar edit  */
+.navbar {
+  background-color: var(--main-color) !important;
+}
+/* end nav bar edit  */
+.navbar-brand img {
+  width: 50px !important ;
+  height: auto !important ;
+}
+/* color system */
+
+button {
+  cursor: pointer;
+}
+
+.btn-insta {
+  background-color: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 200px; /* change this to change the size*/
+}
+
+nav ul a {
+  color: var(--font-color) !important;
+}
+
+nav ul a:active,
+nav ul a:hover,
+nav ul a:focus {
+  color: var(--activ-color) !important;
+}
+
+nav .search svg {
+  color: var(--active-color);
+}
+
+.navbar-toggler {
+  transition: var(--motion-time);
+}
+.navbar-toggler[aria-expanded="true"],
+.navbar-toggler[aria-expanded="false"] {
+  box-shadow: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+  border: 2px solid var(--activ-color);
+}
+
+/* start test logo css  */
+
+.container .navbar-brand img {
+  filter: brightness(200);
+  width: 70px !important;
+}
+
+/* end test logo css  */
+
+/* start landing section  */
+.landing {
+  background-image: url("../imgs/Animated Shape.svg");
+  height: 25vh;
+  box-shadow: 0px -1px 20px 0px black;
+}
+
+/* end landing section  */
+
+/* start footer section  */
+footer {
+  height: 20vh;
+  position: relative !important ;
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -15px;
+  background-image: url("../imgs/wave\ \(2\).svg ");
+  background-size: cover;
+}
+/* end footer section  */
+
+/* .margen-96 {
+  margin-top: 96px;
+  height: 30vh !important;
+}
+
+.margen-96 img {
+  background-size: cover;
+} */
+
+.carousel-indicators button {
+  background-color: white !important;
+}
+
+.h-50vh {
+  height: 40vh !important;
+}
+
+.add-mt-3 {
+  margin-top: 3rem;
+}
+
+.add-mt span {
+  direction: ltr;
+}
+
+/* for text landing  */
+@media screen and (max-width: 500px) {
+  .top-0 {
+    margin-top: 5rem !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .top-0 {
+    margin-top: 5rem !important;
+  }
+}
+
+.carousel-indicators {
+  bottom: -15px;
+}

@@ -1,0 +1,49 @@
+{% extends "beas.html" %}
+{% load static %}
+{% block content %}
+{% include "parts/css_bill.html" %}
+  <body>
+    <section class="p-5">
+
+      <div class="container-fluid position-relative w-100 h-100">\
+
+        <div
+          class="holder position-absolute text-end top-50 w-100 start-50 translate-middle bg-body-secondary p-5 rounded"
+        >
+          <div class="text-black text-sm-center py-1 mb-3 ">
+            <h3>
+              تمت عمليه الحجز
+              <i
+                class="fa-solid fa-check me-2 text-success-emphasis text-success"
+              ></i>
+            </h3>
+            <p class="text-black-50 mt-2">
+              الرجاء تصوير الاصال
+              <i class="fa-solid fa-file-invoice-dollar text-danger"></i>
+            </p>
+          </div>
+          <div class=" my-4   bg- p-3 rounded-1 nice-shadow">
+            <h6 class=" text-black-50 fw-bolder reset-direction mb-1  "> <i class="fa-regular fa-user text-info ms-2"></i>اسم العميل </h6>
+            <span class="text-success mt-2" id="name">{{ name.UserName }}
+</span>
+          </div>
+          <div class=" my-4 bg- p-3 rounded-1 nice-shadow">
+            <h6 class=" text-black-50 fw-bolder reset-direction mb-1  "> <i class="fa-solid fa-mobile-screen-button text-info ms-2"></i>رقم الهاتف</h6>
+            <span class="text-success mt-2" id="number">{{ name.UserNum }}</span>
+          </div>
+          <div class=" my-4 bg- p-3 rounded nice-shadow">
+            <h6 class=" text-black-50 fw-bolder reset-direction mb-1  "> <i class="fa-regular fa-clock text-info ms-2"></i>عدد الساعات</h6>
+            <span class="text-success mt-2" id="time">{{ name.Time }}</span>
+          </div>
+          <div class=" my-4 bg- p-3 rounded nice-shadow">
+            <h6 class=" text-black-50 fw-bolder reset-direction mb-1  "> <i class="fa-solid fa-money-bill-wave text-info ms-2"></i>طريقه الدفع</h6>
+            <span class="text-success mt-2" id="VorC">{{ name.PymentWay }}</span>
+          </div>
+          <div class=" my-4 bg- p-3 rounded nice-shadow">
+            <h6 class=" text-black-50 fw-bolder reset-direction mb-1  "> <i class="fa-regular fa-user text-info ms-2"></i> التاريخ و الوقت</h6>
+            <span class=" mt-2 text-success" id="VorC">{{ name.Time }}</span>
+          </div>
+    </section>
+  </body>
+
+{% endblock content %}

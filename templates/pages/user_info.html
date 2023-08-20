@@ -1,0 +1,108 @@
+{% extends "beas.html" %}
+{% block content %}
+{% include "parts/css_user_info.html" %}
+
+<body>
+<section class="position-relative text-center">
+<div
+    class="holder-frame position-relative top-50 start-50 translate-middle w-75 p-5 rounded bg-white "
+>
+    <div class=" container-fluid">
+    <h3 class=" text-end text-black-50 mb-4">:أدخل بيناتك</h3>
+    <div class="row position-relative h-100">
+      <form  method="POST" action="">
+      {% csrf_token %}
+        <div class="input-group-sm mb-3 rounded d-flex " >
+          <span class=" text-danger me-1">*</span>
+      <input id="name" name="name" required
+          type="text"
+          class="form-control text-end"
+          placeholder="ادخل اسمك هنا"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          required
+      />
+    
+      <button
+          class="btn btn-outline-secondary input-group-sm "
+          type="button"
+          id="button-addon2"
+          disabled
+        >
+          الاسم <i class="fa-solid fa-user me-1"></i>
+      </button>
+      
+      </div>
+      <div class="input-group input-group-sm  mb-3 rounded" >
+          <span class=" text-danger me-1">*</span>
+      <input
+      minlength="8" maxlength="8"
+          type="number" id="number" name="number" required
+          class="form-control text-end"
+          placeholder="99999999"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          required
+      />
+      <button
+          class="btn btn-outline-secondary"
+          type="button"
+          id="button-addon2"
+          disabled
+      >
+          رقم الهاتف <i class="fa-solid fa-mobile-screen me-1"></i>
+      </button>
+      </div>
+      <div class="input-group input-group-sm   mb-3 text-end">
+      <span class=" text-danger me-1">*</span>
+      <select class="form-select text-end rounded" id="inputGroupSelect02" name="time" required>
+          <option selected value="1">ساعه (12ريال)</option>
+          <option value="2">ساعتين (16 ربال)</option>
+      </select> 
+      <label class="input-group-text" for="inputGroupSelect02"
+      >عدد الساعات </label
+      >
+      </div>
+      <div class="input-group input-group-sm mb-3 text-end">
+          <span class=" text-danger me-1">*</span>
+      <select class="form-select text-end rounded" id="inputGroupSelect02" name="vorC">
+          <option selected value="cash">كاش</option>
+          <option value="visa">فيزا</option>
+      </select>
+      <label class="input-group-text" for="inputGroupSelect02"
+      >طرق الدفع</label>
+    </div>
+        {% comment %} {% if request.GET.next %}
+     <input type='hidden' name="next" value="{{ request.GET.next  }}">
+     {% endif %} {% endcomment %}
+    <div class=" next-back d-flex position-absolute  start-50 translate-middle-x w-100 justify-content-between  align-items-center ">
+        <a class=" btn  btn-danger px-lg-4 py-lg-3" href="{% url 'boking' %}"><i class="fa-solid fa-arrow-left me-1 mt-1"></i> رجوع  </a>
+        <input class=" btn  btn-success px-lg-4 py-lg-3 text-light" type="submit" value="الدفع">
+    </div>
+
+    {% comment %} <!-- Display a payment form -->
+    <form id="payment-form">
+      <div id="link-authentication-element">
+        <!--Stripe.js injects the Link Authentication Element-->
+      </div>
+      <div id="payment-element">
+        <!--Stripe.js injects the Payment Element-->
+      </div>
+      <button id="submit">
+        <div class="spinner hidden" id="spinner"></div>
+        <span id="button-text">Pay now</span>
+      </button>
+      <div id="payment-message" class="hidden"></div>
+    </form> {% endcomment %}
+  </body>
+</html>
+      </form>
+    </div>
+
+
+    
+
+</div>
+</section>
+</body>
+{% endblock content %}
